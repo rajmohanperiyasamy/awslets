@@ -1,0 +1,20 @@
+{% extends "index.html" %}
+{% block content %}
+ <section class="contact_section layout_padding">
+  <h3>Login </h3>
+<form method="POST">
+ {% csrf_token %}
+
+ {{form}}
+ <button type="submit">Submit</button>
+
+</form>
+
+<a class="signup-link" href="{% url "authView" %}">Signup</a>
+ </section>
+{% endblock content %}
+{% block feature %}
+{% endblock feature %}
+
+{% block about %}
+{% endblock about %}
