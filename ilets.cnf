@@ -1,0 +1,5 @@
+[client]
+database = ilets
+user = panda
+password = Ilets123!
+default-character-set = utf8
