@@ -29,14 +29,14 @@ padding: 70px;
 margin-bottom: 5px;
 font-size: 14px;
 font-weight: 700;
-line-height: 26px; 
+line-height: 26px;
 }
 .form-wrap form input{
 padding: 12px 20px;
 border-radius: 5px;
 border: 1px solid #DAE1F5;
-background: #FFF; 
-color: #545D7A; 
+background: #FFF;
+color: #545D7A;
 }
 #id_username{
  margin-bottom: 20px;
@@ -52,7 +52,7 @@ padding: 12px 68px;
 font-weight: 700;
 border: 1px solid transparent;
 margin-top: 30px;
-line-height: 26px; 
+line-height: 26px;
 }
 .signup-link{
  color: #10182F;
