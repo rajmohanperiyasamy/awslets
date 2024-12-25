@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-t3n*f7h&imf%+cfmeg@l_lk=n$k7re+mlje&=g$_g%!84^7ic8
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1','51.20.249.60','speed.cloudflare.com','letsfix.in']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1','51.20.249.60','speed.cloudflare.com','http://www.letsfix.in/']
 
 
 # Application definition
