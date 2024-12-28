@@ -1,4 +1,13 @@
 {% extends "index.html" %}
+
+{% block links %}
+    <ul class="navbar-nav ">
+        <li class="nav-item active">
+            <a class="nav-link" href="/#slider_section">Home <span class="sr-only">(current)</span></a>
+        </li>
+    </ul>
+{% endblock links %}
+
 {% block content %}
  <section class="contact_section layout_padding">
   <h3>Signup </h3>
@@ -15,3 +24,6 @@
 
 {% block about %}
 {% endblock about %}
+
+{% block contact %}
+{% endblock contact %}

@@ -10,3 +10,14 @@ class Profile(models.Model):
 
     def __str__(self):
         return self.user.username
+
+
+
+class Contact(models.Model):
+    name = models.CharField( max_length=150)
+    email = models.EmailField()
+    Mobile = models.CharField(max_length=13,default='')
+    message = models.TextField()
+
+    def __str__(self):
+        return self.email

@@ -60,7 +60,7 @@
       <div class="header_bottom">
         <div class="container-fluid">
           <nav class="navbar navbar-expand-lg custom_nav-container ">
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="/">
               <span>
                 Letsfix
               </span>
@@ -71,6 +71,7 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              {% block links %}
               <ul class="navbar-nav ">
                 <li class="nav-item active">
                   <a class="nav-link" href="#slider_section">Home <span class="sr-only">(current)</span></a>
@@ -86,15 +87,19 @@
                 </li>
               {% if user.is_authenticated %}
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'logout' %}">{{ user }}</a>
+                    <a class="nav-link" href="{% url 'logout' %}"> <b>{{ user| title }}</b></a>
                     <a class="nav-link" href="{% url 'logout' %}">Logout</a>
                 </li>
               {% else %}
                    <li class="nav-item">
                        <a class="nav-link" href="{% url 'signin' %}">Login</a>
                   </li>
+                  <li class="nav-item">
+                       <a class="nav-link" href="{% url "authView" %}">Signup</a>
+                  </li>
               {% endif %}
               </ul>
+             {% endblock links %}
             </div>
           </nav>
         </div>
@@ -450,25 +455,12 @@
       </div>
       <div class="row">
         <div class="col-md-6">
-          <form action="">
-            <div>
-              <input type="text" placeholder="Name" />
-            </div>
-            <div>
-              <input type="text" placeholder="Phone Number" />
-            </div>
-            <div>
-              <input type="email" placeholder="Email" />
-            </div>
-            <div>
-              <input type="text" class="message-box" placeholder="Message" />
-            </div>
-            <div class="d-flex ">
-              <button>
-                SEND
-              </button>
-            </div>
-          </form>
+
+            <form method="POST" action="">
+                {% csrf_token %}
+                {{ contact_form }}
+                <button type="submit">SEND</button>
+            </form>
         </div>
         <div class="col-md-6">
           <div class="map_container">
@@ -565,7 +557,7 @@
     <div class="container">
       <p>
         &copy; <span id="displayDateYear"></span> All Rights Reserved By
-        <a href="https://html.design/">Free Html Templates</a>
+        <a href="https://html.design/">Rajmohan</a>
       </p>
     </div>
   </footer>
