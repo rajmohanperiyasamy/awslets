@@ -13,8 +13,6 @@ from .forms import ContactForm
 def home(request):
  if request.method == "POST":
   contact_form = ContactForm(request.POST or None)
-  import pdb
-  pdb.set_trace()
   if contact_form.is_valid():
    contact_form.save()
    return redirect("/")
